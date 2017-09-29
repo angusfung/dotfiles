@@ -1,0 +1,45 @@
+# color
+alias ls 'ls --color=auto'
+alias grep 'grep --color=auto'
+alias egrep 'egrep --color=auto'
+alias fgrep 'fgrep --color=auto'
+alias diff 'colordiff'
+
+# ls, the common ones I use a lot shortened for rapid fire usage
+alias l 'ls -lFh'     #size,show type,human readable
+alias la 'ls -lAFh'   #long list,show almost all,show type,human readable
+alias lr 'ls -tRFh'   #sorted by date,recursive,show type,human readable
+alias lt 'ls -ltFh'   #long list,sorted by date,show type,human readable
+alias ll 'ls -l'      #long list
+alias ldot 'ls -ld .*'
+alias lS 'ls -1FSsh'
+alias lart 'ls -1Fcart'
+alias lrt 'ls -1Fcrt'
+
+alias sgrep 'grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
+
+alias t 'tail -f'
+
+alias dud 'du -d 1 -h'
+alias duf 'du -sh *'
+alias fd 'find . -type d -name'
+alias ff 'find . -type f -name'
+
+# alias rm 'rm -i'
+# alias cp 'cp -i'
+# alias mv 'mv -i'
+
+alias rsync-copy "rsync -avz --progress -h"
+alias rsync-move "rsync -avz --progress -h --remove-source-files"
+alias rsync-update "rsync -avzu --progress -h"
+alias rsync-synchronize "rsync -avzu --delete --progress -h"
+
+alias tmux-split "tmux split-window -b -c '#{pane_current_path}'"
+alias screen-256color 'setenv TERM screen-256color'
+
+alias quotemeta 'perl -lpe '"'"'$_ = quotemeta'"'"
+
+alias zmeld 'zcat \!:1 > ~/tmp/t; zcat \!:2 > ~/tmp/tt; meld ~/tmp/t ~/tmp/tt'
+
+alias pu 'pushd'
+alias po 'popd'
